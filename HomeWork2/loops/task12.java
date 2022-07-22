@@ -14,14 +14,15 @@ public class task12 {
         if (in.hasNextInt()) {
             int a = in.nextInt();
             int b = 1;
-            for (int i = 1; i <= a; i++) {
-
+            int i;
+            for ( i = 1; i < a; i++) {
+                System.out.print(i + " * ");
                 b = b * (a % 10);
 
                 a = a / 10;
 
             }
-            System.out.print(b);
+            System.out.print(i + " = " + b);
 
         } else if (in.hasNextDouble()) {
 
