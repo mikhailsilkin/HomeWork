@@ -2,16 +2,19 @@ package HomeWork2.arrays;
 
 import HomeWork2.Utils.ArraysUtils;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class task24 {
 
     public static void main(String[] args) {
 
+
         System.out.println("Сумма четных: " + SumOfEven(ArraysUtils.arrayRandom(50, 100)));
         System.out.println("Максимальный из элементов массива с четными: " + MaximumElement(ArraysUtils.arrayRandom(50, 100)));
         System.out.println("Элементы массива, меньше среднего арифметического: " + LessThanAverage(ArraysUtils.arrayRandom(50, 100)));
         System.out.println("Два наименьших элемента массива: " + MinimumElements(ArraysUtils.arrayRandom(50, 100)));
+        System.out.println("После удаления элементов: " + Сompression(ArraysUtils.arrayRandom(50, 100)));
         System.out.println("Сумма цифр массива: " + SumOfDigits(ArraysUtils.arrayRandom(50, 100)));
 
     }
@@ -79,6 +82,21 @@ public class task24 {
         }
         String c = " " + a + " " + b;
         return c;
+    }
+    public static String Сompression(int[] array) {
+
+        int a = 32;
+        int b = 77;
+
+        for (int i = 0; i < array.length; i++) {
+
+            if (array[i] > a && array[i] < b) {
+                array[i] = 0;
+            }
+        }
+        String k=Arrays.toString(array);
+        return k;
+
     }
 
        public static int SumOfDigits(int[] array) {
